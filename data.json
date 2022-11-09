@@ -1,0 +1,47 @@
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+         "context": [""]
+        },
+
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""]
+        },
+		
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+		
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+		
+        {"tag": "options",
+         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+         "responses": ["I am here to answer any questions you have about the Mount!", "Ask me any questions you may have about the Mount and I will try my best to answer"],
+         "context": [""]
+        },
+		
+        {"tag": "About",
+         "patterns": ["Can you tell me about the Mount?", "Where is the Mount?"],
+         "responses": ["Mount St. Marys University is a private, liberal arts, Catholic university in the Catoctin Mountains near historic Emmitsburg, Maryland, with a satellite campus for adult students in Frederick, Maryland’s second largest city." ],
+         "context": [""]
+        },
+		
+		{"tag": "Course",
+         "patterns": ["How many majors does the Mount offer?", "How many minors does the Mount offer", "How many majors and minors?"],
+         "responses": ["The university offers more than 80 majors, minors, concentrations and special programs for traditional undergraduate students, and more than 25 adult undergraduate and graduate level programs.", "For undergraduate students, the Mount offers more than 80 majors, minors, concentrations, interdisciplinary and special programs."],
+         "context": [""]
+        }
+		
+   ]
+}
+
+
