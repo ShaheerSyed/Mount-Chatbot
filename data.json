@@ -1,7 +1,7 @@
 {"intents": [
         {"tag": "greeting",
          "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
-         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+         "responses": ["Hello! What can I help you with?", "Hey, ask me anything about the Mount!" , "Hi there, how can I help?"],
          "context": [""]
         },
 
@@ -18,28 +18,108 @@
         },
 		
         {"tag": "noanswer",
-         "patterns": [],
-         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "patterns": ["", "qwertyuiopasdfghjklzxcvbnm"],
+         "responses": ["Sorry, can't understand you. Could you ask again more specifically about the Mount?", "Please give me more info", "Not sure I understand"],
          "context": [""]
         },
 		
         {"tag": "options",
-         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+         "patterns": ["How can you help me?", "What can you do?", "What help do you provide?", "How can you be helpful?", "What support is offered"],
          "responses": ["I am here to answer any questions you have about the Mount!", "Ask me any questions you may have about the Mount and I will try my best to answer"],
          "context": [""]
         },
 		
-        {"tag": "About",
-         "patterns": ["Can you tell me about the Mount?", "Where is the Mount?"],
-         "responses": ["Mount St. Marys University is a private, liberal arts, Catholic university in the Catoctin Mountains near historic Emmitsburg, Maryland, with a satellite campus for adult students in Frederick, Maryland’s second largest city." ],
+        {"tag": "location",
+         "patterns": ["Where is the Mount?", "location", "where are you located?"],
+         "responses": ["Mount St. Marys University is a private, liberal arts, Catholic university in the Catoctin Mountains near historic Emmitsburg, Maryland, with a satellite campus for adult students in Frederick. Marylands second largest city." ],
          "context": [""]
         },
-		
-		{"tag": "Course",
-         "patterns": ["How many majors does the Mount offer?", "How many minors does the Mount offer", "How many majors and minors?"],
-         "responses": ["The university offers more than 80 majors, minors, concentrations and special programs for traditional undergraduate students, and more than 25 adult undergraduate and graduate level programs.", "For undergraduate students, the Mount offers more than 80 majors, minors, concentrations, interdisciplinary and special programs."],
+        
+        {"tag": "About",
+         "patterns": ["Can you tell me about the Mount?", "tell me about the mount", "is the mount catholic?", "information about the mount"],
+         "responses": ["Mount St. Marys University is a private, liberal arts, Catholic university in the Catoctin Mountains near historic Emmitsburg, Maryland, with a satellite campus for adult students in Frederick. Marylands second largest city.", "Mount St. Mary's University is home to five campuses with traditional undergraduate programs, accelerated and adult undergraduate programs, graduate programs, Division I sports, Mount St. Mary's Seminary and the National Shrine Grotto of Our Lady of Lourdes.", "Mount St. Mary's University's main campus is 1,400 tree-lined acres in scenic Emmitsburg, Maryland, and is home to all traditional undergraduate programs, several graduate programs, Division I sports, Mount St. Mary's Seminary and the National Shrine Grotto of Our Lady of Lourdes."],
          "context": [""]
-        }
+        },
+       
+		{"tag": "Academics",
+         "patterns": ["How many majors does the Mount offer?", "How many minors does the Mount offer", "How many majors and minors?", "What majors does the Mount have?", "tell me about majors offered at the mount?"],
+         "responses": ["The university offers more than 80 majors, minors, concentrations and special programs for traditional undergraduate students, and more than 25 adult undergraduate and graduate level programs. Learn more about Mount Academics by clicking the link shown above.", "For undergraduate students, the Mount offers more than 80 majors, minors, concentrations, interdisciplinary and special programs. Learn more about Mount Academics by clicking the link shown above."],
+         "context": [""]
+        }, 
+        
+        {"tag": "UndergraduateAdmissions",
+         "patterns": ["How do I apply?", "Where can I apply?", "Can you tell me how to apply to the mount?", "application?", "apply?", "How can I come to apply to the mount?", "admission"],
+         "responses": ["To be considered for admission, first-year students must complete a free online application using either the Mount Application or Common Application. If you have any questions about the application process, please let us know. And we highly encourage you to visit us or explore our online resources to learn more about our campus! Click the Admissions link above to learn more about applying!"],
+         "context": [""]
+        }, 
+        
+        {"tag": "GraduateAdmission",
+         "patterns": ["Graduate School", "How do I apply to the graduate school?", "graduate student application?", "Mount Graduate School Application", "Graduate Admissions"],
+         "responses": ["Interested in learning about admissions to our graduate schools. Go here for more information: \n http://msmary.edu/admissions/graduate-admissions/graduate-students-admissions-faq.html"],
+         "context": [""]
+        }, 
+        
+        {"tag": "TransferAdmission",
+         "patterns": ["Transfer Student", "I am a transfer student", "How do I apply as a transfer student?", "transfer student application?", "How can I transfer from the Mount", "Transfer Admissions"],
+         "responses": ["If you are considering transferring into the Mount community, we are ready to show you everything Mount St. Marys University has to offer. Our team works hard to make it easy for you to make a seamless transition to the Mount, helping you with everything from transferring credits to course scheduling to assistance with financial aid. Find more information on how to apply as a transfer student here: \n http://msmary.edu/admissions/undergraduate-admissions/transfer-students.html"],
+         "context": [""]
+        }, 
+        
+        {"tag": "AdultAdmissions",
+         "patterns": ["I am an adult", "adult", "adult admissions", "How can I apply as an adult?", "I am ready to come back to school", "adult applications", "I am old but want to go to school"],
+         "responses": ["When you're ready to go back to school and earn your degree, the Mount team is ready to make it as easy and seamless as possible. We understand the challenges that come with balancing school with family and work, which is why we provide full support from one-on-one advising, to flexible and customized degree plans, to accelerated programs, and more. Learn more about our admissions process by clicking the admissions tab above or going here:\n http://msmary.edu/admissions/adult-undergraduate-admissions/adult-undergraduate-students.html"],
+         "context": [""]
+        }, 
+        
+        {"tag": "MissionandValues",
+         "patterns": ["Tell me about the Mount?", "What is the Mounts Mission Statement?", "Why should I come to the Mount!", "Mission statement", "mount values", "values"],
+         "responses": ["Mount St. Mary’s strives to graduate men and women who cultivate a mature spiritual life, who live by high intellectual and moral standards, who respect the dignity of other persons, who see and seek to resolve the problems facing humanity, and who commit themselves to live as responsible citizens.", "As a Catholic university, Mount St. Mary’s graduate's ethical leaders who are inspired by a passion for learning and lead lives of significance in service to God and others."],
+         "context": [""]
+        }, 
+        
+        {"tag": "Visit",
+         "patterns": ["Visit", "Visit the Mount", "Visiting", "How can I visit the Mount", "Is there any way I can visit the Mount?", "I want to schedule a visit", "schedule a visit"],
+         "responses": ["Just about every Mountaineer made a visit to campus before deciding to come here. To find more information on how you can visit our beautiful 1,400 acre campus, both in-person and virtually! Find out more information about schedule a visit here:\n http://msmary.edu/admissions/visit-campus/index.html"],
+         "context": [""]
+        }, 
+         
+        {"tag": "FinancialAid",
+         "patterns": ["Financial Aid", "Aid", "FAFSA", "Tell me about financial aid", "Financial aid packages", "Tell me about Scholarships", "Scholarships", "How can I get a Scholarship"],
+         "responses": ["Mount St. Mary’s University is proud to make a dual commitment to students and families. The second part of our commitment is to make college as affordable as possible for students and their families. In addition to need-based aid, the university awards numerous academic scholarships ranging from $20,000 to full tuition. Understanding financial aid can be a challenge, go here for more information: http://msmary.edu/admissions/financial-aid/index.html "],
+         "context": [""]
+        }, 
+        
+        {"tag": "CampusRec",
+         "patterns": ["Campus recreation", "Campus Rec", "What activites can I do as a student at the Mount", "Is the mount Fun", "fun", "Acticities", "what can I do in my free time", "free time"],
+         "responses": ["There are plenty of activities, sports, and games to keep you moving at the Mount. Learn more about how to get involved here!\n http://msmary.edu/campus-recreation/index.html"],
+         "context": [""]
+        }, 
+        
+        {"tag": "GettingInvolved",
+         "patterns": ["Getting Involved", "Clubs", "club", "Tell me about clubs at the mount", "Tell me how I can get involved", "How can I get involved", "What clubs are available."],
+         "responses": ["Getting involved is easy with over 70+ student societies, clubs and registered student organizations (RSOs) that fall in a broad range of interests. Pick an area of interest and see what speaks to you:\n http://msmary.edu/campus-life/get-involved/index.html"],
+         "context": [""]
+        },
+        
+        {"tag": "Athletics",
+         "patterns": ["sports", "basketball", "soccer", "lacrosse", "What sports are played at the Mount", "Is the Mount a Division 1 School?", "Division", "Can you tell me about Mount Athletics", "Mount Athletics", "what sports does the mount offer"],
+         "responses": ["We take athletics seriously around here. We like to run, jump, hit, dunk, lift, dive, throw and anything else that keeps us active and moving. Mountaineers compete in Division I athletics across 24 programs, as well as two premier sports. And each and every one of us is filled to the top with bona fide, blue and white, busting-at-the-seams Mount Maniac school spirit!. Learn more about Mount Athletics at the link below: \n http://msmary.edu/athletics/index.html "],
+         "context": [""]
+        },
+        
+        {"tag": "campuslife",
+         "patterns": ["Campus life", "how is campus life", "How is life on campus?", "campus", "What is it like living on campus", "campus living", "living on campus", "Can you tell me about campus life"],
+         "responses": ["Living on campus is an exciting part of the traditional college experience that immerses you in learning more about yourself, the Mount culture around you and the role you will play as a leader within your community and abroad.", "Surrounded by the Cactocin Mountains and the National Shrine Grotto of Our Lady of Lourdes, our small campus connects you in a way that is uniquely different from other colleges and univeristies in the area. Here at the Mount, you will have an opportunity to grow spiritually, academically, socially, and personally just from getting involved and actively participating in what the Mount has to offer.", "Living on campus puts you right in the middle of everything  from campus activities to club meetings. You're close to classes for mornings when the alarm doesn't go off, close to the library for late night cram sessions, and just a trailwalk away from the Catoctin Mountains, which means its easy to find space to breathe and reflect."],
+         "context": [""]
+        }, 
+        
+        {"tag": "Housing",
+          "patterns": ["Housing", "dorming", "dorm life", "Tell me about housing", "Tell me about dorming at the mount", "housing information"],
+          "responses": ["As a prospective incoming student at the Mount, you will receive housing information as a part of your admissions and orientation package. First-year students, while encouraged are not required to live on campus. All full-time undergraduate students are eligible to live in university-owned housing; unless they are enrolled as a commuter. While we are not able to guarantee housing for graduate students; if available, housing options will be offered only after all undergraduate students have been assigned housing.", "Students live on campus in traditional residence halls, suite-style housing, apartments or our University Cottages. Check out our housing options!", "All students apply to live in general housing, which includes Sheridan Hall, Pangborn Hall, Bradley Hall and areas of the Terrace Complex. Some opt to be considered for placement in an Integrated Learning Living Community (ILLC), but those who do not are randomly assigned to a building with others in their class year."],
+          "context": [""]
+        } 
+        
+
 		
    ]
 }
